@@ -1,0 +1,222 @@
+body {
+    background-color: #EDEFEE;
+    font-family: Raleway, sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+header a img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+
+}
+
+main {
+    margin-bottom: 1em;
+}
+
+/* Navigation */
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding-inline-start: 0px;
+}
+
+nav li {
+    display: inline-block;
+
+
+}
+
+nav li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #26877F;
+}
+
+/* bottom stroke */
+
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #26877F;
+    height: 0.1em;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+/* Main */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+article {
+    flex: 1;
+}
+
+
+.section-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2015/04/10/17/03/pots-716579_1280.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 1em;
+}
+
+.section-1 article {
+    color: #EDEFEE;
+    padding: 1em;
+
+}
+
+.section-2 article {
+    background-color: #fff;
+
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50.75002929801945% 63.00246103363413%;
+}
+
+.article-content,
+.article-button {
+    padding: 0 0.5em 0.5em 0.5em;
+    box-sizing: border-box;
+}
+
+.article-image {
+    padding: 0.5em 0.5em 0 0.5em;
+    overflow: hidden;
+    height: 12.5em;
+
+}
+
+.article-button {
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.article-button a {
+    padding: 1em 1.67em;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.2em;
+    font-size: 0.8rem;
+    background: #000;
+    color: #EDEFEE;
+    text-transform: uppercase;
+    border-radius: 18.75em;
+    cursor: pointer;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+
+
+
+.article-button a:hover {
+
+    
+    background-color: #26877F;
+    transition: all .5s;
+
+
+
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+}
+
+footer div {
+    flex: 1;
+}
+
+footer img {
+    display: block;
+    width: 2.5em;
+
+}
+
+.footer-content {
+    border-top: 1px solid #000;
+}
+
+.footer-content p {
+    text-align: right;
+
+}
